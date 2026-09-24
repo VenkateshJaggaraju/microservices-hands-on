@@ -1,0 +1,13 @@
+package com.quiz_service.quiz_service.exception;
+
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
+
+@RestControllerAdvice
+public class GlobalExceptionHandler {
+
+    @ExceptionHandler(Exception.class)
+    public String handler(Exception exception){
+        return exception.getMessage();
+    }
+}
